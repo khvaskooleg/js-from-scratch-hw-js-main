@@ -8,4 +8,4 @@ while (i <= 20) {
     sum = sum + b
     b++
 }
-console.log (sum)
+// console.log (sum)
