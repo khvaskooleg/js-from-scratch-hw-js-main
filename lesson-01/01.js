@@ -4,7 +4,7 @@
 // your code
 let sum = 0
 let b = 1
-while (i <= 20) {
+while (b <= 20) {
     sum = sum + b
     b++
 }
