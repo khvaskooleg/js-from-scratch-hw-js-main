@@ -10,7 +10,7 @@
 let dice1 = Math.floor((Math.random() * 6) + 1)
 let dice2 = Math.floor((Math.random() * 6) + 1)
 let isWinningDouble 
-isWinningDouble = (dice1 == dice2)
+isWinningDouble = (dice1 === dice2)
 
 console.log('Первый бросок: ' + dice1)
 console.log('Второй бросок: ' + dice2)
