@@ -3,4 +3,6 @@
 function calculateAverage(a, b) {
     return ( a + b ) / 2
 }
+
+// git add
 // console.log(calculateAverage(2, 7))
