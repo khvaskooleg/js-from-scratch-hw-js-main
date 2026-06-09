@@ -15,13 +15,7 @@ includesElement([1, 2, 3], 2)  // должен вернуть `true`.
 */
 
 function includesElement(array, element) {
-    let a = false;
     for (let i = 0; i < array.length; i++) {
-        if (element === array[i]) {
-            a = true;
-        } else {
-            a = false;
-        }
+        element = array[i] ? true : false;
     }
-    return a;
 }
