@@ -24,13 +24,14 @@ function firstElement(array1, array2) {
         for (let j = 0; j < array2.length; j++) {
             if (array1[i] === array2[j]) {
                 newArray.push(array1[i]);
+                break
             }
     }
 }
 return newArray;
 }
 
-console.log(firstElement([1, 4, 5, 2, 3], [3, 1, 9, 9 , 21,7]))
+console.log(firstElement([1, 4, 5, 9, 2, 21, 3], [3, 1, 3, 9, 9 , 21,7]))
 
 
 // function findCommonElements(){
