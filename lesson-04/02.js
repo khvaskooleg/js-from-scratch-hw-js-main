@@ -28,9 +28,8 @@ function includesElement(array, element) {
 }
 function findUniqueElements(array) {
     let newArray = [];
-    includesElement(newArray, array[j])
     for (j = 0; j < array[j]; j++) {
-            if (!includesElement) {
+            if (!includesElement(newArray, array[j])) {
             newArray.push(array[j]);
             return newArray;
         }
