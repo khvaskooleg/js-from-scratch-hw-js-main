@@ -31,7 +31,7 @@ function firstElement(array1, array2) {
 return newArray;
 }
 
-console.log(firstElement([1, 4, 5, 9, 2, 21, 3], [3, 1, 3, 9, 9 , 21,7]))
+console.log(firstElement(array1, array2))
 
 
 // function findCommonElements(){
