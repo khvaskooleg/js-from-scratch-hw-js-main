@@ -26,9 +26,9 @@ function firstElement(array1, array2) {
             newArray.push(array1[i]);
             return newArray;
         }
-        return newArray;
     }
 }
+return newArray;
 }
 
 // function findCommonElements(){
