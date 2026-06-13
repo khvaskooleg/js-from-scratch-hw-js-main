@@ -16,12 +16,12 @@
 function doubleEachCharacter(str) {
     let newArray = [];
     let array = Array.from(str);
-    for (i = 0; i < array.length; i++) {
+    for (let i = 0; i < array.length; i++) {
         newArray.push(array[i] + array[i]);
     }
     let newStr = newArray.join('')
     return newStr;
 }
-let result = doubleEachCharacter('hits')
+let result = doubleEachCharacter('hello')
 console.log(result);
 
