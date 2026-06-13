@@ -28,11 +28,13 @@ function includesElement(array, element) {
 }
 function findUniqueElements(array) {
     let newArray = [];
-    includesElement(newArray, array[i])
-    if (!includesElement) {
-        newArray.push(array[i]);
-        return newArray;
-    }
+    includesElement(newArray, array[j])
+    for (j = 0; j < array[j]; j++) {
+            if (!includesElement) {
+            newArray.push(array[j]);
+            return newArray;
+        }
     return newArray;
+    }
 }
 
