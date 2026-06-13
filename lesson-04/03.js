@@ -21,15 +21,17 @@ function firstElement(array1, array2) {
     let newArray =[]
     // let a = false;
     for (let i = 0; i < array1.length; i++) {
-    for (let j = 0; j < array2.length; j++) {
-        if (array1[i] === array2[j]) {
-            newArray.push(array1[i]);
-            return newArray;
-        }
+        for (let j = 0; j < array2.length; j++) {
+            if (array1[i] === array2[j]) {
+                newArray.push(array1[i]);
+            }
     }
 }
 return newArray;
 }
+
+console.log(firstElement([1, 4, 5, 2, 3], [3, 1, 9, 9 , 21,7]))
+
 
 // function findCommonElements(){
 //     for (let i = 0; i < newArray.length; i++) {
