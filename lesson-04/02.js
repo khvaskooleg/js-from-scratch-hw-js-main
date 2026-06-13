@@ -19,7 +19,7 @@
 function includesElement(array, element) {
     let a = false;
     for (let i = 0; i < array.length; i++) {
-        if (array[j] === element) {
+        if (array[i] === element) {
             a = true;
             return a;
         }
@@ -28,9 +28,9 @@ function includesElement(array, element) {
 }
 function findUniqueElements(array) {
     let newArray = [];
-    for (j = 0; j < array[j]; j++) {
-            if (!includesElement(newArray, array[j])) {
-            newArray.push(array[j]);
+    for (let i = 0; i < array[i]; i++) {
+            if (!includesElement(newArray, array[i])) {
+            newArray.push(array[i]);
         }
     }
     return newArray;
