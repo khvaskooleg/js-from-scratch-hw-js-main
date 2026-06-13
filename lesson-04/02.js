@@ -17,35 +17,13 @@
 проекту за счёт hoisting.
 */
 
-// function findUniqueElements(array) {
-//     let newArray = [];
-//     for (let i = 0; i < array.length; i++) {
-//         newArray.push(array[i]) 
-//     }
-//     function includesElement(newArray, array[i]) {
-//         for (let i = 0; i < newArray.length; i++) {
-//             if (newArray[i] = array[i])
-//         }
-//     }    
-// }
-
-
-// for (let a = 0; a < newArray.length; a++) {
-//             if (newArray[i] != array[i]) {
-//                 newArray.push(array[i])
-//                 return newArray;
-
 function findUniqueElements(array) {
     let newArray = [];
-    for (let i = 0; i < array.length; i++) {
-        if (!includesElement(newArray, array[i])) {
-            newArray.push(array[i])
-        }
+    includesElement(newArray, array[i]);
+    if (includesElement() = false) {
+        newArray.push(array[i]);
+        return newArray;
     }
-    return newArray;    
+    return newArray;
 }
-
-
-let result = findUniqueElements([1, 3, 4, 2, 4, 2, 6])
-console.log(result);
 
