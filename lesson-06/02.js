@@ -29,7 +29,7 @@ const map = (array, callback) => {
   const newArray = []
   for (let i = 0; i < array.length; i++) {
     if (i in array && callback(array[i], i)) {
-      return newArray.push(callback(i))
+      return newArray.push(callback)
     }
   }
   return newArray
