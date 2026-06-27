@@ -9,7 +9,8 @@
 - `element` (текущий элемент массива),
 - `index` (индекс текущего элемента),
 
-Ваша функция `map` должна возвращать новый массив, где каждый элемент является результатом вызова функции `callback` на каждом элементе исходного массива.
+Ваша функция `map` должна возвращать новый массив, где каждый элемент является результатом вызова функции `callback` на каждом элементе 
+исходного массива.
 */
 
 /*
@@ -28,7 +29,7 @@ const map = (array, callback) => {
   const newArray = []
   for (let i = 0; i < array.length; i++) {
     if (i in array && callback(array[i], i)) {
-      return newArray.push(array[i])
+      return newArray.push(callback(i))
     }
   }
   return newArray
