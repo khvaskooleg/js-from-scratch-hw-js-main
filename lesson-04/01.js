@@ -25,6 +25,6 @@ function includesElement(array, element) {
     return a;
 }
 
-let result = includesElement([1, 2, 4], 3);
+let result = includesElement([1, 2, 4], 90);
 console.log(result);
 

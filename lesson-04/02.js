@@ -30,10 +30,11 @@ function includesElement(array, element) {
 function findUniqueElements(array) {
     let newArray = [];
     for (let i = 0; i < array.length; i++) {
-            if (!includesElement(newArray, array[i])) {
-            newArray.push(array[i]);
+        if (!includesElement(newArray, array[i])) {
+        newArray.push(array[i]);
         }
     }
     return newArray;
 }
 
+console.log(findUniqueElements([1, 3, 3, 3, 3, 3, 4]));

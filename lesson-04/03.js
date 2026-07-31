@@ -26,7 +26,7 @@ function findCommonElements(array1, array2) {
                 newArray.push(array1[i]);
                 break
             }
-    }
+        }
     }
 return newArray;
 }

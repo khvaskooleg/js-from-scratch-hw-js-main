@@ -17,3 +17,42 @@ const WEB_TECH_IMAGES = [
   'https://production-it-incubator.s3.eu-central-1.amazonaws.com/file-manager/Image/c8a1f4a6-1337-4899-bdfd-a8c9c7bb806a_css-magic-logo.jpg',
   'https://production-it-incubator.s3.eu-central-1.amazonaws.com/file-manager/Image/784380b9-6937-42a6-bdfe-869835820234_html-magic-logo.jpg',
 ]
+
+// const prev = document.getElementById("prev-button")
+// const next = document.getElementById("next-button")
+
+// prev.onclick = function getPrev() {
+//   const webTechImage = document.getElementById("web-tech-image")
+//   webTechImage.setAttribute("src", WEB_TECH_IMAGES[i])
+// }
+// next.onclick = function getNext() {
+//   const webTechImage = document.getElementById("web-tech-image")
+//   webTechImage.setAttribute("src", WEB_TECH_IMAGES[i])
+// }
+
+
+// const next = document.getElementById("next-button")
+
+// next.onclick = function getNext() {
+//   const webTechImage = document.getElementById("web-tech-image")
+//   for (let i = 0; i < WEB_TECH_IMAGES.length; i++) {
+//   const nextImage = webTechImage.setAttribute("src", WEB_TECH_IMAGES[i])
+//   }
+// }
+
+let i = 0;
+
+const prev = document.getElementById("prev-button")
+const next = document.getElementById("next-button")
+const webTechImage = document.getElementById("web-tech-image")
+
+next.onclick = function getNext() {
+  i = (i + 1) % WEB_TECH_IMAGES.length
+  webTechImage.setAttribute("src", WEB_TECH_IMAGES[i])
+}
+
+prev.onclick = function getPrev() {
+  i = (i - 1 + WEB_TECH_IMAGES.length) % WEB_TECH_IMAGES.length
+  webTechImage.setAttribute("src", WEB_TECH_IMAGES[i])
+}
+
