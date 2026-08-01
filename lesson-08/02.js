@@ -4,8 +4,11 @@
  */
 
 function isNumeric(str) {
-  const res = typeof str ? Number : String
-  return res
+  if (typeof str == "string" || str == " " || str !== "number") {
+    return false;
+  } else {
+    return true;
+  }
 }
 
 // console.log(isNumeric("123")) // Ожидаемый результат: true
