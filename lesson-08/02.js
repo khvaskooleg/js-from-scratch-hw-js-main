@@ -6,8 +6,6 @@
 function isNumeric(str) {
   if (typeof str == "string" || str == " " || str !== "number") {
     return false;
-  } else {
-    return true;
   }
 }
 
