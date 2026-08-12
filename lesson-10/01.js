@@ -26,16 +26,24 @@ const model = {
   addMovie(title, description) {
     const id = Math.random()
     const newMovie = { id, title, description }
-    this.movies.push(newMovie) // Добавляем фильм в массив
+    
+    // !!! ВАЖНО: Добавляем фильм в массив
+    this.movies.push(newMovie)
+    
     view.renderMovies(this.movies)
   },
   
+  // 1. Реализуем метод deleteMovie в модели
   deleteMovie(id) {
-    // Находим индекс фильма по id
+    // Находим индекс фильма по id (приводим к строке для корректного сравнения)
     const index = this.movies.findIndex(movie => String(movie.id) === String(id))
-    if (movieIndex !== -1) {
-      this.movies.splice(movieIndex, 1) // Удаляем фильм из массива
-      view.renderMovies(this.movies) // Обновляем отображение
+    
+    if (index !== -1) {
+      // Удаляем фильм из массива movies
+      this.movies.splice(index, 1)
+      
+      // Обновляем отображение фильмов на странице
+      view.renderMovies(this.movies)
     }
   }
 }
