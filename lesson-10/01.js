@@ -26,10 +26,18 @@ const model = {
   addMovie(title, description) {
     const id = Math.random()
     const newMovie = { id, title, description }
-    this.movies.push(newMovie)
+    this.movies.push(newMovie) // Добавляем фильм в массив
     view.renderMovies(this.movies)
   },
-  // your code
+  
+  deleteMovie(id) {
+    // Находим индекс фильма по id
+    const index = this.movies.findIndex(movie => String(movie.id) === String(id))
+    if (movieIndex !== -1) {
+      this.movies.splice(movieIndex, 1) // Удаляем фильм из массива
+      view.renderMovies(this.movies) // Обновляем отображение
+    }
+  }
 }
 
 const view = {
@@ -50,7 +58,21 @@ const view = {
       inputDescription.value = ''
     })
 
-    // your code
+    // Добавляем обработчик события для удаления фильмов
+    const list = document.querySelector('.list')
+    list.addEventListener('click', function(event) {
+      // Проверяем, что клик был по кнопке удаления
+      if (event.target.classList.contains('delete-button')) {
+        // Находим родительский элемент li (фильм)
+        const movieElement = event.target.closest('.movie')
+        if (movieElement) {
+          // Получаем id фильма из атрибута id элемента
+          const movieId = movieElement.id
+          // Передаем id в контроллер
+          controller.deleteMovie(movieId)
+        }
+      }
+    })
   },
   renderMovies(movies) {
     const list = document.querySelector('.list')
@@ -90,7 +112,12 @@ const controller = {
       view.displayMessage('Заполните все поля!', true)
     }
   },
-  // your code
+  deleteMovie(id) {
+    // Передаем id в модель для удаления
+    model.deleteMovie(id)
+    // Отображаем сообщение об успешном удалении
+    view.displayMessage('Фильм успешно удалён!')
+  }
 }
 
 function init() {
